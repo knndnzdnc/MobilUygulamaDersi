@@ -1,0 +1,35 @@
+name: flutter_sms
+description: İOS ve Android'de SMS ve MMS göndermek için bir Flutter eklentisi. İMessage etkinleştirilirse, iOS'ta iMessage olarak gönderilir. Bu eklenti, iOS'ta gerçek bir cihazda test edilmelidir.
+version: 2.1.1
+author: Kenan deniz dinç
+
+environment:
+  sdk: ">=2.0.0-dev.28.0 <3.0.0"
+  flutter: ">=1.12.8 <2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  url_launcher: ^5.4.2
+  flutter_web_plugins:
+    sdk: flutter
+  plugin_platform_interface: ^1.0.1
+  flutter_user_agent: ^1.2.2
+
+
+  cupertino_icons: ^0.1.2
+  geolocator: ^5.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.example.flutter_sms
+        pluginClass: FlutterSmsPlugin
+      ios:
+        pluginClass: FlutterSmsPlugin
+
